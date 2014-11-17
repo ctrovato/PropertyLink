@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Property Link</title>
 	<link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
-	<link rel="shortcut icon" href="images/BrowserLogo.png">
+	<link rel="shortcut icon" href="images/TabLogo.png">
 </head>
 <body>
 	<div class="navigation">
