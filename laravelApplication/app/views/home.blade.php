@@ -8,15 +8,46 @@
 	<link rel="shortcut icon" href="images/BrowserLogo.png">
 </head>
   <body>
-    <div class="container">
-		<!-- <h5>{{ date('M d, Y')}}.</h5> -->
+
+<!-- <div id="navigation">
+	<nav>
+		<div id="box">
+			<a href="/"><h1>Property Link</h1></a>
+		</div>
+		<ul id="nav_list">
+			<li> <a href = "#">Homes</a></li>
+			<li> <a href = "#">Apartments</a></li>
+			<li> <a href = "#">Condos</a></li>
+			<li> <a href = "#">Mortgages</a></li>
+
+			<span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Log In</a></span>
+		</ul>
+	</nav>
+</div>
+ -->
+
+
+
+  <div class="container">
+
 	<div class="navigation">
-		<a href="/"><h1>Property Link</h1></a>
+	<nav>
+		<div id="box">
+			<a href="/"><h1>Property Link</h1></a>
+		</div>
+		<ul class="float_left" id="nav_list">
+			<li> <a href = "#">Homes</a></li>
+			<li> <a href = "#">Apartments</a></li>
+			<li> <a href = "#">Condos</a></li>
+			<li> <a href = "#">Mortgages</a></li>
+			<span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Log In</a></span>
+		</ul>
+	</nav>
 	</div>
 
 		<form method="POST" action="results">
 			<div class="boxbox">
-				<input class="search" type="text" name="zip" placeholder="Enter Zipcode"/>
+				<input autofocus class="search" type="text" name="zip" placeholder="Enter Zipcode"/>
 				<input class="submit" type="submit" value="SEARCH"/>
 			</div>
 		</form>

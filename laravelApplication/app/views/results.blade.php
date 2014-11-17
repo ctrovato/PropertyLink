@@ -4,15 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Property Link</title>
 	<link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
+	<link rel="shortcut icon" href="images/BrowserLogo.png">
 </head>
 <body>
-<div class="navigation">
-		<a href="/"><h1>Property Link</h1></a>
-</div>
+	<div class="navigation">
+		<nav>
+			<div id="box">
+				<a href="/"><h1>Property Link</h1></a>
+			</div>
+			<ul class="float_left" id="nav_list">
+				<li> <a href = "#">Homes</a></li>
+				<li> <a href = "#">Apartments</a></li>
+				<li> <a href = "#">Condos</a></li>
+				<li> <a href = "#">Mortgages</a></li>
+				<span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Log In</a></span>
+			</ul>
+		</nav>
+	</div>
+
 <!-- <h5>{{ date('M d, Y')}}.</h5> -->
 
 <div class="searchZip">
-	<h3 class="listingZip">Listings for {{ $zipCode }}</h3>
+	<h3 class="listingZip">Listings in "{{ $zipCode }}" on {{ date('M d, Y')}}</h3>
 </div>
 
 

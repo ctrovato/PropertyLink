@@ -33,17 +33,6 @@ body{
 }
 
 
-.navigation{
-   position: fixed;
-   top: 0;
-   height:100px;
-   width: 100%;
-   padding: 0 1.5%; /* 20px/1000px*/
-   background-color:#64727f;
-   box-shadow: 0px 2px 2px #000000;
-   z-index:3;
-   overflow: hidden;
-}
 
 .searchZip{
    position: fixed;
@@ -54,19 +43,155 @@ body{
    background-color:white;
    box-shadow: 0px 2px 2px #000000;
    z-index:3;
-   margin-top: 100px;
+   margin-top: 80px;
    overflow: hidden;
 }
-
-
-
-
 
 hr {
     height: 12px;
     border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(100,114,127,0.5);
 }
+
+/*=========== Navigation ===============
+==============================*/
+
+
+.navigation{
+   position: fixed;
+   top: 0;
+   height:80px;
+   width: 100%;
+   padding: 0 1.5%; /* 20px/1000px*/
+   background-color:#64727f;
+   box-shadow: 0px 3px 3px #000000;
+   z-index:3;
+   overflow: hidden;
+}
+
+#nav_list{
+  overflow:hidden;
+  left: 0;
+}
+
+
+#box p{
+  font-size: 1.8em;
+  display: inline-block;
+  margin-top: 5px;
+  text-align: left;
+}
+
+#box {
+  width: 26%; /* 260px/1000px */
+  float: left;
+  color: #E3E6E9;
+  margin-left:50px;
+}
+
+nav>ul{
+  margin: 0;
+    padding: 0px 1% ;/* 10px/1000px */ /* 20px/1000px */
+    text-align: center;
+    width: 64%; /* 640px/1000px */
+    line-height: 97px;
+    float: left;
+    height: 110px;
+}
+
+nav ul~ul{
+   width: 64%; /* 640px/1000px */
+}
+
+
+nav ul>li{
+  padding-left:0;
+  font-family:"Optima", sans-serif;
+  font-size: 1.2em;
+
+}
+
+nav ul li{
+  font-family:"Optima", sans-serif;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 1.041666666%; /*10px/960px*/
+
+}
+
+nav ul li a{
+  text-decoration: none;
+  color:#EFECED;
+  font-family:"Optima", sans-serif;
+  left: 0;
+}
+
+nav ul li a:hover{
+  font-weight: bold;
+  color: #c9e4ff;
+}
+
+#log_in{
+
+  margin-bottom: 280px;
+}
+
+
+#sign_in a{
+  text-decoration: none;
+  margin-right: 0px;
+  margin-left: 0px;
+  background: transparent;
+  border-radius:0px;
+  padding: 7px;
+  color: rgb(242,242,242);
+  width: 100px;
+
+}
+
+#register{
+  width: 100px;
+
+}
+
+#register a{
+  text-decoration:none;
+  background: transparent;
+  color: rgb(255,255,255);
+  border-radius:0px;
+  padding: 7px;
+  width: 100px;
+
+}
+
+#sign_in a:hover {
+
+  background: #536A7f;
+  color: rgb(250,250,250);
+  font-weight: bold;
+}
+
+#register a:hover{
+  background:  #536A7f;
+  color: rgb(250,250,250);
+  font-weight: bold;
+}
+
+
+.float_left{
+  float: left;
+}
+
+.float_right{
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
 
 /*===========LOGO===============
 ==============================*/
@@ -75,9 +200,11 @@ h1{
   text-indent: -9999px;
   background: url(../images/Logo2.png);
   background-repeat: no-repeat;
-  height: 100%;
-  width: 250px;
-  padding-bottom: 50px;
+  height: 90px;
+  width: 200px;
+  margin: 7px 0px 0px 0px;
+  padding-top:10px;
+  margin-right: 5px;
 }
 
 h4{
@@ -124,6 +251,8 @@ form {
   border-style:solid;
   border-width:6px;
   border-color:#64727F;
+  box-shadow: 3px 3px 3px 3px #1f1f1f;
+
 }
 
 .search, .submit {
@@ -163,9 +292,9 @@ textarea:focus, input:focus {
 }
 
 
-.submit:hover {
+/*.submit:hover {
   background: #536A7f;
-}
+}*/
 
 
 /*============= Search Results ======================
