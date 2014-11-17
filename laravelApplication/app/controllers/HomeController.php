@@ -40,7 +40,6 @@ class HomeController extends BaseController {
 
 		$zwsid = "X1-ZWz1b1sywwr2ff_6ttia";
 
-
 		$url = 'http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id='.$zwsid.'&address='.$zipSearch.'&citystatezip='.$zipSearch.'';
 		$xml = simplexml_load_file($url);
 // Search Results
@@ -49,6 +48,7 @@ class HomeController extends BaseController {
 		foreach ($data["searchResults"] as $place) {
 			$place->wholeAddress = $place->address . ' ' . $place->address->street;
 			$place->googleStreet = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location=".$place->address->latitude.",".$place->address->longitude."&key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM";
+			$place->googleMap ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$place->address->latitude.",".$place->address->longitude."&zoom=16&maptype=roadmap";
 		}
 
 // var_dump($data["searchResults"]);
@@ -80,7 +80,6 @@ class HomeController extends BaseController {
 
 		// $data["lastUpdated"] = $xml->response->results->result->zestimate->last-updated;
 		// $data["askingPrice"] = $xml->response->results->result->zestimate->amount;
-
 
 		return View::make('results', $data);
 	}

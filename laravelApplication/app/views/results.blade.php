@@ -46,7 +46,12 @@
 
 
 	<div class="fixed">
-		<h2></h2>
+		<iframe
+		  width="850"
+		  height="500"
+		  frameborder="0" style="border:0"
+		  src="{{$result->googleMap}}">
+		</iframe>
 	</div>
 </div> <!-- pushdown -->
 

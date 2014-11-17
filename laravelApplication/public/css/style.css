@@ -71,7 +71,7 @@ hr {
 
 #nav_list{
   overflow:hidden;
-  left: 0;
+  float: left
 }
 
 
@@ -203,8 +203,7 @@ h1{
   height: 90px;
   width: 200px;
   margin: 7px 0px 0px 0px;
-  padding-top:10px;
-  margin-right: 5px;
+  z-index: -1;
 }
 
 h4{
@@ -227,6 +226,7 @@ h3{
   font-family:"Optima", sans-serif;
   color: #536A7f;
   margin: 0 0 70px;
+  padding-left:
 }
 
 .address{
