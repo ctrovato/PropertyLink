@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Property Link</title>
     <link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
+    <link rel="stylesheet"  href="{{URL::asset('css/style2.css')}}" type="text/css">
     <link rel="shortcut icon" href="images/TabLogo.png">
 </head>
   <body>
@@ -25,27 +26,16 @@
     </nav>
     </div>
 
-<h3>Newsletter Sign Up</h3>
-{{ Form::open(array('url'=>'thanks'))}}
-    {{ Form::label('email', 'Email Address') }}
-    {{ Form::text('email') }}
 
-    {{ Form::label('os', 'Opperationg System') }}
-    {{ Form::select('os', array(
-        'linux' => 'Linux',
-        'mac' => 'OS X',
-        'windows' => 'Windows',
-    ))}}
+    <form class="login" method="POST" action="login">
+        <h3>Login</h3>
+        <input type="text" name="username" class="login-input" placeholder="Username" required="required" autofocus require>
+        <input type="password" name="password" class="login-input" placeholder="Password" required="required">
+        <input type="submit" value="Login" class="login-submit">
+        <p class="login-help"><a href="#">Forgot password?</a></p>
+    </form>
 
-    {{ Form::label('comment', 'Comments') }}
-    {{ Form::textarea('comment', '', array('placeholder' => 'What are your interests?')) }}
 
-    {{ Form::checkbox('agree','yes',false) }}
-    {{ Form::label('agree', 'I agree to terms and conditions') }}
-
-    {{ Form::submit('Sign Up') }}
-
-{{ Form::close() }}
 
     </div>
 

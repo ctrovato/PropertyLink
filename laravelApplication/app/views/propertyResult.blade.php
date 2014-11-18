@@ -17,7 +17,7 @@
 				<li> <a href = "#">Apartments</a></li>
 				<li> <a href = "#">Condos</a></li>
 				<li> <a href = "#">Mortgages</a></li>
-				<span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Log In</a></span>
+				<span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Log In</a></span>
 			</ul>
 		</nav>
 	</div>
@@ -52,6 +52,12 @@
 
 
 	<div class="fixed">
+		<iframe
+		  width="850"
+		  height="500"
+		  frameborder="0" style="border:0"
+		  src="{{$googleMap}}">
+		</iframe>
 	</div>
 </div> <!-- pushdown -->
 

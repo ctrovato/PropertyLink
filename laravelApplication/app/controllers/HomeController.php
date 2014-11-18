@@ -129,15 +129,73 @@ class HomeController extends BaseController {
 
 
 		$data["googleStreet"] = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location=".$data["latitude"] .",".$data["longitude"]."&key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM";
-		// $googleMap ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$data["latitude"] .",".$data["longitude"]."&zoom=16&maptype=satellite";
+		$data["googleMap"] ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$data["latitude"] .",".$data["longitude"]."&zoom=16&maptype=satellite";
 
 
 		return View::make('propertyResult', $data);
 
 	}
 
+
+
+	public function login() {
+
+		$data = array();
+
+		$username = Input::get('username');
+		$password = Input::get('password');
+
+
+		$results = DB::table('users')
+			->where('username', $username)
+			->where('password', $password)
+			->get();
+
+		// var_dump($results);
+
+		if($results != []){
+			Session::put('users',$results[0]);
+			return View::make('home');
+
+		}else{
+			return View::make('404');
+		}
+
+	}
+
+
+
+	public function register() {
+
+		$data = array();
+
+		$username = Input::get('username');
+		$password = Input::get('password');
+
+
+		$results = DB::table('users')
+			->where('username', $username)
+			->get();
+
+		// var_dump($results);
+
+		$count = count($results, COUNT_RECURSIVE);
+
+		if($count === 0){
+
+			DB::table('users')->insertGetId(
+				array('username' => $username, 'password'=>$password));
+
+			$data['user'] = $username;
+
+			return View::make('404');
+
+		}
+
+
+
+	}
+
 }
-
-
 
 

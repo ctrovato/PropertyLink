@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Property Link</title>
 	<link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
-	<link rel="stylesheet"  href="{{URL::asset('css/style2.css')}}" type="text/css">
+	<link rel="stylesheet"  href="{{URL::asset('css/style3.css')}}" type="text/css">
 	<link rel="shortcut icon" href="images/TabLogo.png">
 </head>
   <body>
@@ -26,12 +26,9 @@
 	</nav>
 	</div>
 
-		<form method="POST" action="results">
-			<div class="boxbox">
-				<input autofocus class="search" type="text" name="zip" placeholder="Enter Zipcode"/>
-				<input class="submit" type="submit" value="SEARCH"/>
-			</div>
-		</form>
+		<div class="pushDown">
+			<h2>Error 404: Something Went Wrong...</h2>
+		</div> <!-- pushdown -->
 
 	</div>
 

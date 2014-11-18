@@ -54,13 +54,14 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'laravelApp',
+			'host'      => '127.0.0.1',
+			'database'  => 'PropertyLink',
 			'username'  => 'root',
 			'password'  => 'root',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
+			'port'      => '8889',
 		),
 
 		'pgsql' => array(

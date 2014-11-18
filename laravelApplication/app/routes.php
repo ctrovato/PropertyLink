@@ -14,30 +14,47 @@
 
 Route::get('/','HomeController@searchFunction');
 
-
 Route::post('results','HomeController@showResults');
-
 
 Route::get('propertyResult', 'HomeController@propertyResult');
 
 
-Route::get('about/directions', function(){
-	return'Directions content goes here';
+// login
+Route::get('login', function(){
+return View::make('login');
 });
 
-Route::get('about/{theSubject}', function($theSubject){
-	return $theSubject.' content goes here';
+Route::post('login', 'HomeController@login');
+
+// Register
+Route::get('register', function(){
+return View::make('register');
 });
 
-Route::get('about/classes/{theSubject}', function($theSubject){
-	return "Content about {$theSubject} classes goes here";
-});
+Route::post('register', 'HomeController@register');
 
-Route::get('signup', function(){
-	return View::make('signup');
-});
 
-Route::post('thanks', function(){
-	$theEmail = Input::get('email');
-	return View::make('thanks')->with('theEmail', $theEmail);
-});
+
+
+// Route::get('about/directions', function(){
+// 	return'Directions content goes here';
+// });
+
+// Route::get('about/{theSubject}', function($theSubject){
+// 	return $theSubject.' content goes here';
+// });
+
+// Route::get('about/classes/{theSubject}', function($theSubject){
+// 	return "Content about {$theSubject} classes goes here";
+// });
+
+// Route::get('signup', function(){
+// 	return View::make('signup');
+// });
+
+
+
+// Route::post('thanks', function(){
+// 	$theEmail = Input::get('email');
+// 	return View::make('thanks')->with('theEmail', $theEmail);
+// });
