@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Property Link</title>
     <link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
+    <link rel="stylesheet"  href="{{URL::asset('css/style2.css')}}" type="text/css">
     <link rel="shortcut icon" href="images/TabLogo.png">
 </head>
   <body>
@@ -20,18 +21,21 @@
             <li> <a href = "#">Apartments</a></li>
             <li> <a href = "#">Condos</a></li>
             <li> <a href = "#">Mortgages</a></li>
-            <span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Log In</a></span>
+            <span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Login</a></span>
         </ul>
     </nav>
     </div>
 
-<h3>Sign Up</h3>
 
-<form method="POST" action="login">
-    <input type='text' name='username' placeholder="Username" autofocus required></input>
-    <input type='text' name='password' placeholder="Password" ></input>
-    <input type='submit' value='Login' class="btn" ></input>
-</form>
+    <form class="login" method="POST" action="login">
+        <h5>Sign Up</h5>
+        <input type="text" name="username" class="login-input" placeholder="Enter Username" required="required" autofocus require>
+        <input type="text" name="username" class="login-input" placeholder="Re-enter Username" required="required" autofocus require>
+        <br>
+        <input type="password" name="password" class="login-input" placeholder="Enter Password" required="required">
+        <input type="password" name="password" class="login-input" placeholder="Re-enter Password" required="required">
+        <input type="submit" value="Sign Up" class="login-submit">
+    </form>
 
 
 

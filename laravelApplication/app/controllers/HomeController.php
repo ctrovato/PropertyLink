@@ -160,7 +160,6 @@ class HomeController extends BaseController {
 		}else{
 			return View::make('404');
 		}
-
 	}
 
 

@@ -221,6 +221,14 @@ h4{
   margin: 0 0 5px;
 }
 
+h5{
+  font-family:"Optima", sans-serif;
+  font-size: 2em;
+  color: #EFECED;
+  text-align: center;
+  margin: 5px 0px 30px 0px;
+}
+
 p{
   font-family:"Optima", sans-serif;
   margin: 0 0 5px;
@@ -275,7 +283,7 @@ form {
 }
 
 .search {
-  highlight-color: #64727F;
+  highlight-color: #EFECED;
 }
 
 textarea, input {
@@ -379,8 +387,9 @@ input, textarea, select, label {
 
 .login {
   margin: 20px auto;
+  margin-top: 200px;
   padding: 18px 20px;
-  width: 200px;
+  width: 300px;
   background: #3f65b7;
   background-clip: padding-box;
   border: 1px solid #172b4e;

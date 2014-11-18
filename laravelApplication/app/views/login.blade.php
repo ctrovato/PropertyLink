@@ -21,14 +21,14 @@
             <li> <a href = "#">Apartments</a></li>
             <li> <a href = "#">Condos</a></li>
             <li> <a href = "#">Mortgages</a></li>
-            <span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Log In</a></span>
+            <span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Login</a></span>
         </ul>
     </nav>
     </div>
 
 
     <form class="login" method="POST" action="login">
-        <h3>Login</h3>
+        <h5>Login</h5>
         <input type="text" name="username" class="login-input" placeholder="Username" required="required" autofocus require>
         <input type="password" name="password" class="login-input" placeholder="Password" required="required">
         <input type="submit" value="Login" class="login-submit">
