@@ -22,6 +22,8 @@
 			<p>Built: {{ $result->yearBuilt }}</p>
 			<p>Lot Square Ft: {{ $result->lotSizeSqFt }}</p>
 			<p>Last Re-Sale Date: {{ $result->lastSoldDate }}</p>
+			<p>Last Re-Sale Price: {{ $result->lastSoldPrice }}</p>
+			<p>Listing Price: {{ $result->askingPrice }}</p>
 		</div>
 	</div><!--  float -->
 

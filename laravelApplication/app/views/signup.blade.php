@@ -2,32 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign-Up: A Laravel Form</title>
-    <style>
-        label {
-            display: block;
-            padding-top: 1em;
-        }
-        input[type="submit"] {
-            display: block;
-            margin-top: 2em;
-        }
-        textarea {
-            display: block;
-            margin-bottom: 1em;
-        }
-        input[type="checkbox"] {
-            display: inline-block;
-            margin-top: 1em;
-        }
-        label[for="agree"] {
-            display: inline;
-        }
-
-    </style>
+    <title>Property Link</title>
+    <link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
+    <link rel="shortcut icon" href="images/TabLogo.png">
 </head>
+  <body>
 
-<body>
+  <div class="container">
+
+    <div class="navigation">
+    <nav>
+        <div id="box">
+            <a href="/"><h1>Property Link</h1></a>
+        </div>
+        <ul class="float_left" id="nav_list">
+            <li> <a href = "#">Homes</a></li>
+            <li> <a href = "#">Apartments</a></li>
+            <li> <a href = "#">Condos</a></li>
+            <li> <a href = "#">Mortgages</a></li>
+            <span id="register" class= "float_right"><a href="#">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="#">Log In</a></span>
+        </ul>
+    </nav>
+    </div>
+
 <h3>Newsletter Sign Up</h3>
 {{ Form::open(array('url'=>'thanks'))}}
     {{ Form::label('email', 'Email Address') }}
@@ -49,5 +46,10 @@
     {{ Form::submit('Sign Up') }}
 
 {{ Form::close() }}
+
+    </div>
+
+
 </body>
 </html>
+

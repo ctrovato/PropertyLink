@@ -66,6 +66,7 @@ class HomeController extends BaseController {
 		$data["latitude"] = $xml->response->results->result->address->latitude;
 		$data["longitude"] = $xml->response->results->result->address->longitude;
 // Details
+		$data["lastSoldPrice"] = $xml->response->results->result->address->lastSoldPrice;
 		$data["useCode"] = $xml->response->results->result->useCode;
 		$data["taxYear"] = $xml->response->results->result->taxAssessmentYear;
 		$data["tax"] = $xml->response->results->result->taxAssessment;
@@ -74,16 +75,15 @@ class HomeController extends BaseController {
 		$data["FinishedSqFt"] = $xml->response->results->result->finishedSizeSqFt;
 		$data["bedrooms"] = $xml->response->results->result->bedrooms;
 		$data["bathrooms"] = $xml->response->results->result->bathrooms;
-		$data["lastSoldDate"]= $xml->response->results->result->lastSoldDate;
+		// $data["lastSoldDate"] = $xml->response->results->result->lastSoldDate;
 
-		// return($data["latitude"]);
-
+// Listing Price
 		// $data["lastUpdated"] = $xml->response->results->result->zestimate->last-updated;
 		// $data["askingPrice"] = $xml->response->results->result->zestimate->amount;
+		// $data["last-updated"] = $xml->response->results->result->zestimate->last-updated;
 
 		return View::make('results', $data);
 	}
-
 
 
 
@@ -99,15 +99,18 @@ class HomeController extends BaseController {
 		$url = 'http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id='.$zwsid.'&address='.$zipSearch.'&citystatezip='.$zipSearch.'';
 		$xml = simplexml_load_file($url);
 // Search Results
-		$data["searchResults"] = $xml->response->results;
+		$data["searchResults"] = $xml->response->results->result;
 
+		// foreach ($data["searchResults"] as $place) {
+		// 	$place->wholeAddress = $place->address . ' ' . $place->address->street;
+		// 	$place->googleStreet = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location=".$place->address->latitude.",".$place->address->longitude."&key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM";
+		// 	$place->googleMap ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$place->address->latitude.",".$place->address->longitude."&zoom=16&maptype=roadmap";
+		// }
 
-
-
-
-		}
-
+		return($data["searchResults"]);
 	}
+
+}
 
 
 
