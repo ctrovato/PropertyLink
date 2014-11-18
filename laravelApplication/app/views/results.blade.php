@@ -5,6 +5,8 @@
 	<title>Property Link</title>
 	<link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
 	<link rel="shortcut icon" href="images/TabLogo.png">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=ja"></script>
+	<script src="geolocation.js"></script>
 </head>
 <body>
 	<div class="navigation">
@@ -34,24 +36,27 @@
 	@foreach($searchResults as $result)
 		<div class="searchDetails">
 			<img src="{{$result->googleStreet}}" height="150" width="250">
-			<a href="propertyResult"><h4 class="address">{{ $result->wholeAddress }}</h4><h4>{{ $city }}, {{ $state }} {{ $zipCode }}</h4></a>
+			<a href="propertyResult?zpid={{ $result->zpid }}"><h4 class="address">{{ $result->wholeAddress }}</h4><h4>{{ $city }}, {{ $state }} {{ $zipCode }}</h4></a>
 
-			<p>Bed {{ $result->bedrooms }}, Bath {{ $result->bathrooms }}</p>
+			<p>{{ $result->bedrooms }} Bed , {{ $result->bathrooms }} Bath </p>
 			<p>Built: {{ $result->yearBuilt }}</p>
 			<p>Lot Square Ft: {{ $result->lotSizeSqFt }}</p>
-			<p>Last Re-Sale Date: {{ $result->lastSoldDate }}</p>
+			<p>Last Sale Date: {{ $result->lastSoldDate }}</p>
+			<p>Last Sale Price: ${{ $result->lastSoldPrice }}.00</p>
+			<p>Listing Price: ${{ $result->asking }}.00</p>
 		</div>
 	@endforeach
 	</div><!--  float -->
 
 
 	<div class="fixed">
-		<iframe
+		<div id="map-canvas"></div>
+<!-- 		<iframe
 		  width="850"
 		  height="500"
 		  frameborder="0" style="border:0"
 		  src="{{$result->googleMap}}">
-		</iframe>
+		</iframe> -->
 	</div>
 </div> <!-- pushdown -->
 

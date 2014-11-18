@@ -310,6 +310,20 @@ textarea:focus, input:focus {
     /*position: relative;*/
 }
 
+.propertyDetails{
+    color:#536A7f;
+    border-style:groove;
+    border-width:1px;
+    background-color: white;
+    border-color:#536A7f;
+    margin: 0 15px 20px;
+    padding: 10px 10px 10px 10px;
+    text-indent: 25px;
+    width: 290px;
+    height:600px;
+    /*position: relative;*/
+}
+
 .pushDown{
     margin-top: 150px;
 }
