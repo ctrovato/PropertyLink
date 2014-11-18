@@ -8,18 +8,23 @@
 </head>
 <body>
 	<div class="navigation">
-		<nav>
-			<div id="box">
-				<a href="/"><h1>Property Link</h1></a>
-			</div>
-			<ul class="float_left" id="nav_list">
-				<li> <a href = "#">Homes</a></li>
-				<li> <a href = "#">Apartments</a></li>
-				<li> <a href = "#">Condos</a></li>
-				<li> <a href = "#">Mortgages</a></li>
-				<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Login</a></span>
-			</ul>
-		</nav>
+	<nav>
+		<div id="box">
+			<a href="/"><h1>Property Link</h1></a>
+		</div>
+		<ul class="float_left" id="nav_list">
+			<li> <a href = "#">Homes</a></li>
+			<li> <a href = "#">Apartments</a></li>
+			<li> <a href = "#">Condos</a></li>
+			<li> <a href = "#">Mortgages</a></li>
+
+			@if(Session::get('user'))
+<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">logout</a></span>
+			@else
+<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Login</a></span>
+			@endif
+		</ul>
+	</nav>
 	</div>
 <!-- <h5>{{ date('M d, Y')}}.</h5> -->
 

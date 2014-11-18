@@ -154,12 +154,24 @@ class HomeController extends BaseController {
 		// var_dump($results);
 
 		if($results != []){
-			Session::put('users',$results[0]);
-			return View::make('home');
+			Session::put('user',$results[0]);
+
+			$data['user'] = Session::get('user');
+
+			return View::make('success', $data);
 
 		}else{
 			return View::make('404');
 		}
+	}
+
+
+
+	public function logout() {
+
+		Session::flush();
+
+		return Redirect::to('/');
 	}
 
 
@@ -187,14 +199,12 @@ class HomeController extends BaseController {
 
 			$data['user'] = $username;
 
+			return View::make('login');
+
+		}else if($count > 0){
 			return View::make('404');
-
 		}
-
-
-
 	}
-
 }
 
 

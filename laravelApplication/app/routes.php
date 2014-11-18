@@ -26,6 +26,10 @@ return View::make('login');
 
 Route::post('login', 'HomeController@login');
 
+// logout
+Route::get('logout', 'HomeController@logout');
+
+
 // Register
 Route::get('register', function(){
 return View::make('register');

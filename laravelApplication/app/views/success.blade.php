@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Property Link</title>
+	<title>Success</title>
 	<link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
-	<link rel="stylesheet"  href="{{URL::asset('css/style3.css')}}" type="text/css">
 	<link rel="shortcut icon" href="images/TabLogo.png">
 </head>
-  <body>
-
-  <div class="container">
-
+<body>
 	<div class="navigation">
 	<nav>
 		<div id="box">
 			<a href="/"><h1>Property Link</h1></a>
 		</div>
 		<ul class="float_left" id="nav_list">
-			<li> <a href = "#">Homes</a></li>
+			<li> <a href = "/">Homes</a></li>
 			<li> <a href = "#">Apartments</a></li>
 			<li> <a href = "#">Condos</a></li>
 			<li> <a href = "#">Mortgages</a></li>
@@ -32,11 +28,15 @@
 	</nav>
 	</div>
 
-		<div class="pushDown">
-			<h2>Error 404: Something Went Wrong...</h2>
-		</div> <!-- pushdown -->
 
-	</div>
+<div class="pushDown">
+	<div class="floatDiv">
+		<div class="searchDetails">
+					<h4>Welcome, {{$user->username}}</h4>
+				<a href="logout">Logout</a>
+		</div>
+	</div><!--  float -->
+
 
 
 </body>
