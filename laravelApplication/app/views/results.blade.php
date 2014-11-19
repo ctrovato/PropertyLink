@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!--     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> -->
 	<meta charset="UTF-8">
 	<title>Property Link</title>
 	<link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
 	<link rel="shortcut icon" href="images/TabLogo.png">
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=ja"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=eng"></script>
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="geolocation.js"></script>
 </head>
 <body>
 	<div class="navigation">
@@ -41,7 +41,9 @@
 <div class="pushDown">
 	<div class="floatDiv">
 	@foreach($searchResults as $result)
-		<div class="searchDetails">
+		<div class="searchDetails" data-latitude="{{ $result->address->latitude }}"  data-longitude="{{ $result->address->longitude }} ">
+<!-- 		<input type="hidden" class="latitude" value="{{ $result->address->latitude }}" />
+			<input type="hidden" class="longitude" value="{{ $result->address->longitude }}" /> -->
 			<img src="{{$result->googleStreet}}" height="150" width="250">
 			<a href="propertyResult?zpid={{ $result->zpid }}"><h4 class="address">{{ $result->wholeAddress }}</h4><h4>{{ $city }}, {{ $state }} {{ $zipCode }}</h4></a>
 
@@ -58,17 +60,11 @@
 
 	<div class="fixed">
 		<div id="map-canvas"></div>
-<!-- 		<iframe
-		  width="850"
-		  height="500"
-		  frameborder="0" style="border:0"
-		  src="{{$result->googleMap}}">
-		</iframe> -->
 	</div>
 </div> <!-- pushdown -->
 
 
-
+<script src="/js/geolocation.js"></script>
 </body>
 </html>
 

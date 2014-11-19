@@ -9,7 +9,7 @@ Colors:
 
 
 
-/*============= Searh Box  ======================
+/*============= Search Box  ======================
 ===========================================================*/
 
 
@@ -253,6 +253,14 @@ h3{
 
 }
 
+
+
+#map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
 /*============= Searh Box  ======================
 ===========================================================*/
 
@@ -383,7 +391,6 @@ textarea:focus, input:focus {
 
 .fixed{
     width: 200px;
-    background-color: #EFECED;
     position: fixed;
     overflow: hidden;
     float: left;
