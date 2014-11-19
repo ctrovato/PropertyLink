@@ -33,7 +33,7 @@
 	</div>
 
 		<div class="pushDown">
-			<h2>Error 404: Something Went Wrong...</h2>
+			<h2>Error 404: Something went wrong...</h2>
 		</div> <!-- pushdown -->
 
 	</div>

@@ -36,7 +36,7 @@
 
 		<form method="POST" action="results">
 			<div class="boxbox">
-				<input autofocus class="search" type="text" name="zip" placeholder="Enter Zipcode"/>
+				<input autofocus class="search"  pattern="[0-9]+" type="text" name="zip" placeholder="Enter Zipcode" maxlength="5" minlength="5"/>
 				<input class="submit" type="submit" value="SEARCH"/>
 			</div>
 		</form>

@@ -24,6 +24,14 @@ class HomeController extends BaseController {
 
 		$zipSearch = Input::get('zip');
 
+		if(strlen($zipSearch) !== 5){
+			return View::make('results', $data);
+		}
+
+		if(is_nan((int) $zipSearch)){
+			return View::make('results', $data);
+		}
+
 		$data = array();
 
 		$zwsid = "X1-ZWz1b1sywwr2ff_6ttia";
@@ -31,6 +39,11 @@ class HomeController extends BaseController {
 		$url = 'http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id='.$zwsid.'&address='.$zipSearch.'&citystatezip='.$zipSearch.'';
 		$xml = simplexml_load_file($url);
 // Search Results
+
+				$data["zipCode"] = $zipSearch;
+
+		try{
+
 		$data["searchResults"] = $xml->response->results->result;
 
 		foreach ($data["searchResults"] as $place) {
@@ -40,18 +53,19 @@ class HomeController extends BaseController {
 			$place->asking = (string) $place->zestimate->amount;
 		}
 
+		$data["found"] = count($data["searchResults"]);
+
 // var_dump($data["searchResults"]);
 
-		$data["zpid"] = $xml->response->results->zpid;
+		// $data["zpid"] = $xml->response->results->zpid;
 // Links
 		// $data["homedetails"] = $xml->response->results->result->links->homedetails;
 		// $data["graphsanddata"] = $xml->response->results->result->links->graphsanddata;
 		// $data["mapthishome"] = $xml->response->results->result->links->mapthishome;
 // Address
 		// $data["streetAddress"] = $xml->response->results->result->address->street;
-		$data["zipCode"] = $xml->response->results->result->address->zipcode;
-		$data["city"] = $xml->response->results->result->address->city;
-		$data["state"] = $xml->response->results->result->address->state;
+		// $data["city"] = $xml->response->results->result->address->city;
+		// $data["state"] = $xml->response->results->result->address->state;
 		// $data["latitude"] = $xml->response->results->result->address->latitude;
 		// $data["longitude"] = $xml->response->results->result->address->longitude;
 // Details
@@ -72,7 +86,18 @@ class HomeController extends BaseController {
 
 		// $data["last-updated"] = $xml->response->results->result->zestimate->last-updated;
 
-		return View::make('results', $data);
+		}catch(Exception $e){
+
+				$data["searchResults"] = array();
+
+				$data["found"] = 0;
+
+			// redirect
+
+		}
+
+			return View::make('results', $data);
+
 	}
 
 
@@ -99,6 +124,9 @@ class HomeController extends BaseController {
 		// 	$place->googleMap ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$place->address->latitude.",".$place->address->longitude."&zoom=16&maptype=satellite";
 		// 	$place->asking = (string) $place->zestimate->amount;
 		// }
+
+		var_dump($xml->response->address);
+		return;
 
 // Address
 		$data["streetAddress"] = $xml->response->address->street;
