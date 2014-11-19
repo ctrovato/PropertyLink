@@ -8,9 +8,10 @@ $("div.searchDetails").hover(function() {
 	var latitude = $(this).attr('data-latitude');
 	var longitude = $(this).attr('data-longitude');
 	var mapOptions = {
-		zoom: 19,
+		zoom: 16,
 		center: new google.maps.LatLng(latitude, longitude)
 	};
+
 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 });

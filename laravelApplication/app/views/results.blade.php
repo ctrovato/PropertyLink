@@ -20,6 +20,8 @@
 			<li> <a href = "#">Apartments</a></li>
 			<li> <a href = "#">Condos</a></li>
 			<li> <a href = "#">Mortgages</a></li>
+			<li> <a href = "#">Agents</a></li>
+			<li> <a href = "#">Local</a></li>
 
 			@if(Session::get('user'))
 				<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">Logout</a></span>
@@ -33,7 +35,7 @@
 <!-- <h5>{{ date('M d, Y')}}.</h5> -->
 
 	<div class="searchZip">
-		<h3 class="listingZip">{{ $found }} Listings Found in "{{ $zipCode }}" on {{ date('M d, Y')}}</h3>
+		<h3 class="listingZip">{{ $found }} Listings found in "{{ $zipCode }}" on {{ date('M d, Y')}}</h3>
 	</div>
 
 

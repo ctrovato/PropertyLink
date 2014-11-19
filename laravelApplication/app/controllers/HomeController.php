@@ -125,8 +125,8 @@ class HomeController extends BaseController {
 		// 	$place->asking = (string) $place->zestimate->amount;
 		// }
 
-		var_dump($xml->response->address);
-		return;
+		// var_dump($xml->response->address);
+
 
 // Address
 		$data["streetAddress"] = $xml->response->address->street;

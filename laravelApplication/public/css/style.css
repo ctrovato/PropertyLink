@@ -42,7 +42,7 @@ body{
    background-color:white;
    box-shadow: 0px 2px 2px #000000;
    z-index:3;
-   margin-top: 80px;
+   margin-top: 65px;
    overflow: hidden;
 }
 
@@ -59,7 +59,7 @@ hr {
 .navigation{
    position: fixed;
    top: 0;
-   height:80px;
+   height:65px;
    width: 100%;
    padding: 0 1.5%; /* 20px/1000px*/
    background-color:#64727f;
@@ -70,7 +70,9 @@ hr {
 
 #nav_list{
   overflow:hidden;
-  float: left
+  float: left;
+  padding: 0;
+  margin-left: 90px;
 }
 
 
@@ -82,7 +84,7 @@ hr {
 }
 
 #box {
-  width: 26%; /* 260px/1000px */
+/*  width: 26%; *//* 260px/1000px */
   float: left;
   color: #E3E6E9;
   margin-left:50px;
@@ -115,7 +117,8 @@ nav ul li{
   list-style: none;
   display: inline-block;
   text-align: center;
-  text-transform: uppercase;
+  line-height: 60px;
+/*  text-transform: uppercase;*/
   padding: 0 1.041666666%; /*10px/960px*/
 
 }
@@ -245,6 +248,7 @@ h3{
   color: #536A7f;
   margin: 0 0 70px;
   padding-left: 50px;
+  font-size: 1em;
 }
 
 .address{
