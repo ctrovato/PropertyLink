@@ -13,7 +13,7 @@
 			<a href="/"><h1>Property Link</h1></a>
 		</div>
 		<ul class="float_left" id="nav_list">
-			<li> <a href = "#">Homes</a></li>
+			<li> <a href = "/">Homes</a></li>
 			<li> <a href = "#">Apartments</a></li>
 			<li> <a href = "#">Condos</a></li>
 			<li> <a href = "#">Mortgages</a></li>
@@ -50,11 +50,8 @@
 			<p>School District: {{ $schoolDistrict}}</p>
 			<p>Elementary School: {{ $elementarySchool}}</p>
 			<p>Middle School: {{ $middleSchool}}</p>
-
-
 		</div>
 	</div><!--  float -->
-
 
 	<div class="fixed">
 		<iframe

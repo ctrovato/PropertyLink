@@ -129,7 +129,7 @@ class HomeController extends BaseController {
 
 
 		$data["googleStreet"] = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location=".$data["latitude"] .",".$data["longitude"]."&key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM";
-		$data["googleMap"] ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$data["latitude"] .",".$data["longitude"]."&zoom=16&maptype=satellite";
+		$data["googleMap"] ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$data["latitude"] .",".$data["longitude"]."&zoom=17&maptype=satellite";
 
 
 		return View::make('propertyResult', $data);

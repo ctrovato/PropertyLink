@@ -6,6 +6,7 @@
 	<link rel="stylesheet"  href="{{URL::asset('css/style.css')}}" type="text/css">
 	<link rel="shortcut icon" href="images/TabLogo.png">
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=ja"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="geolocation.js"></script>
 </head>
 <body>
@@ -15,7 +16,7 @@
 			<a href="/"><h1>Property Link</h1></a>
 		</div>
 		<ul class="float_left" id="nav_list">
-			<li> <a href = "#">Homes</a></li>
+			<li> <a href = "/">Homes</a></li>
 			<li> <a href = "#">Apartments</a></li>
 			<li> <a href = "#">Condos</a></li>
 			<li> <a href = "#">Mortgages</a></li>

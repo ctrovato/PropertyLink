@@ -18,12 +18,12 @@
 			<li> <a href = "#">Condos</a></li>
 			<li> <a href = "#">Mortgages</a></li>
 
+		@if(Session::get('user'))
+			<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">Logout</a></span>
+		@else
+			<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Login</a></span>
+		@endif
 
-			@if(Session::get('user'))
-<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">Logout</a></span>
-			@else
-<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Login</a></span>
-			@endif
 		</ul>
 	</nav>
 	</div>
@@ -31,12 +31,12 @@
 
 <div class="pushDown">
 	<div class="floatDiv">
-		<div class="searchDetails">
-					<h4>Welcome, {{$user->username}}</h4>
-				<a href="logout">Logout</a>
+		<div class="userDetails">
+			<h3>Welcome, {{$user->username}}</h3>
+			<a href="logout">Logout</a>
 		</div>
 	</div><!--  float -->
-
+</div>
 
 
 </body>

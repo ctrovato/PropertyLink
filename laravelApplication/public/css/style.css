@@ -313,6 +313,18 @@ textarea:focus, input:focus {
 }
 
 
+.submit:hover {
+  font-weight:600;
+  background:#5B7282;
+  color:#fff;
+  height:100%;
+  width:30%;
+  float:right;
+  transition: all 100ms ease-in-out;
+}
+
+
+
 /*============= Search Results ======================
 ===========================================================*/
 
@@ -342,9 +354,20 @@ textarea:focus, input:focus {
     padding: 10px 10px 10px 10px;
     text-indent: 25px;
     width: 290px;
-    height:600px;
+    min-height: 600px;
     /*position: relative;*/
 }
+
+.userDetails{
+    margin: 0 15px 20px;
+    padding: 10px 10px 10px 10px;
+    text-indent: 25px;
+    width: 290px;
+    height:360px;
+    background: transparent;
+    /*position: relative;*/
+}
+
 
 .pushDown{
     margin-top: 150px;
