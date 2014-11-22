@@ -10,27 +10,32 @@
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
-	<div class="navigation">
-	<nav>
-		<div id="box">
-			<a href="/"><h1>Property Link</h1></a>
-		</div>
-		<ul class="float_left" id="nav_list">
-			<li> <a href = "/">Homes</a></li>
-			<li> <a href = "#">Apartments</a></li>
-			<li> <a href = "#">Condos</a></li>
-			<li> <a href = "#">Mortgages</a></li>
-			<li> <a href = "#">Agents</a></li>
-			<li> <a href = "#">Local</a></li>
+<div class="container">
+		<div class="navigation">
+			<nav>
+				<div id="box">
+					<a href="/"><h1>Property Link</h1></a>
+				</div>
+				<ul class="float_left" id="nav_list">
+					<li> <a href = "/">Homes</a></li>
+					<li> <a href = "#">Apartments</a></li>
+					<li> <a href = "#">Condos</a></li>
+					<li> <a href = "#">Mortgages</a></li>
+					<li> <a href = "#">Agents</a></li>
+					<li> <a href = "#">Local</a></li>
 
-			@if(Session::get('user'))
-				<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">Logout</a></span>
-			@else
-				<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Login</a></span>
-			@endif
-		</ul>
-	</nav>
-	</div>
+
+				@if(Session::get('user'))
+					<span id="register" class= "float_right"><a href="#">{{Session::get('user')->username}}</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">Logout</a></span>
+				@else
+					<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Login</a></span>
+				@endif
+
+				</ul>
+			</nav>
+		</div>
+</div>
+
 
 <!-- <h5>{{ date('M d, Y')}}.</h5> -->
 

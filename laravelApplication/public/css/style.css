@@ -15,7 +15,7 @@ Colors:
 
 
 body{
-  background-color: #FEFDF2;
+  background-color: #E8E8E8;
 /*  background-image: url(../images/houseBG.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -68,11 +68,13 @@ hr {
    overflow: hidden;
 }
 
+
+
 #nav_list{
   overflow:hidden;
   float: left;
   padding: 0;
-  margin-left: 90px;
+  width: 1100px;
 }
 
 
@@ -203,7 +205,7 @@ h1{
   background: url(../images/Logo2.png);
   background-repeat: no-repeat;
   height: 90px;
-  width: 200px;
+  width: 175px;
   margin: 7px 0px 0px 0px;
   z-index: -1;
 }
@@ -342,8 +344,8 @@ textarea:focus, input:focus {
 
 .searchDetails{
     color:#536A7f;
-    border-style:groove;
-    border-width:1px;
+/*    border-style:groove;*/
+/*    border-width:1px;*/
     background-color: white;
     border-color:#536A7f;
     margin: 0 15px 20px;
@@ -372,8 +374,11 @@ textarea:focus, input:focus {
     margin: 0 15px 20px;
     padding: 10px 10px 10px 10px;
     text-indent: 25px;
-    width: 290px;
-    height:360px;
+    border-style:groove;
+    border-width:1px;
+    border-color:#536A7f;
+    width: 290;
+    min-height: 400px;
     background: transparent;
     /*position: relative;*/
 }
@@ -397,6 +402,7 @@ textarea:focus, input:focus {
     overflow: hidden;
     float: left;
     border: 1px solid black;
+    border-color: #C0C0C0;
     margin-left: 450px;
     width:850px;
     height: 500px;

@@ -3,6 +3,8 @@
 class HomeController extends BaseController {
 
 
+
+
 	public function searchFunction(){
 
 		$zipSearch = Input::get('zip');
@@ -49,7 +51,7 @@ class HomeController extends BaseController {
 		foreach ($data["searchResults"] as $place) {
 			$place->wholeAddress = $place->address . ' ' . $place->address->street. '' ;
 			$place->googleStreet = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location=".$place->address->latitude.",".$place->address->longitude."&key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM";
-			$place->googleMap ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$place->address->latitude.",".$place->address->longitude."&zoom=16&maptype=satellite";
+			$place->googleMap ="https://www.google.com/maps/embed/v1/view?key=AIzaSyCChESUvSyJpS8FOW5ZBMOMG3rAQ7BRgwM&center=".$place->address->latitude.",".$place->address->longitude."&zoom=21&maptype=satellite";
 			$place->asking = (string) $place->zestimate->amount;
 		}
 

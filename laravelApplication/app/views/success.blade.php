@@ -20,8 +20,10 @@
 			<li> <a href = "#">Agents</a></li>
 			<li> <a href = "#">Local</a></li>
 
+
+
 		@if(Session::get('user'))
-			<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">Logout</a></span>
+			<span id="register" class= "float_right"><a href="#">{{Session::get('user')->username}}</a> </span> <span id="sign_in" class= "float_right"> <a href="logout">Logout</a></span>
 		@else
 			<span id="register" class= "float_right"><a href="register">Sign Up</a> </span> <span id="sign_in" class= "float_right"> <a href="login">Login</a></span>
 		@endif
@@ -35,7 +37,6 @@
 	<div class="floatDiv">
 		<div class="userDetails">
 			<h3>Welcome, {{$user->username}}</h3>
-			<a href="logout">Logout</a>
 		</div>
 	</div><!--  float -->
 </div>
